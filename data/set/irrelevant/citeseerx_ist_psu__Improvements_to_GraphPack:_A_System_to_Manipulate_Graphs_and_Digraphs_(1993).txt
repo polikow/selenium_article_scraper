@@ -1,0 +1,3 @@
+Improvements to GraphPack: A System to Manipulate Graphs and Digraphs (1993)
+
+This paper describes the improvements that we have carried out on GraphPack, the system that we have developed here. These improvements are specifically four fold. We have incorporated GraphPack to communicate with other systems; specifically, Mathematica, Maple, Matlab and SetPlayer. Further, we have incorporated commands to perform graph algorithms on MasPar,a SIMD machine. A lot of display routines are added for different embeddings of graphs. We also incorporated a 3D display of graphs, including rotation and swapping of vertices to get a better embedding. Finally, the language LiLa and the interpreter has been enhanced so as to write application programs easier.

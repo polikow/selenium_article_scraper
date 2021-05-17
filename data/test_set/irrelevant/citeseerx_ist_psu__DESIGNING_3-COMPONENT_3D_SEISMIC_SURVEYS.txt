@@ -1,0 +1,3 @@
+DESIGNING 3-COMPONENT 3D SEISMIC SURVEYS
+
+One of the features of converted wave recording is that the reflection point is not centered between source and receiver points but rather that the conversion point lies some distance further away from the source point which is dependant upon the Vp/Vs ratio. Therefore binning converted wave 3D surveys can be

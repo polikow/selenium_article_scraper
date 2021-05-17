@@ -1,0 +1,3 @@
+Protein Structure Prediction Using Physics-based Global Optimization with Knowledge-guided Fragment Packing
+
+We describe a protein structure prediction method that predicts the three-dimensional structure of new folds via minimizations of a physics-based energy function. The method is one of the few attempts to use an all-atom physics-based energy function throughout all stages of the optimization. It differs from the Stochastic Perturbation with Soft Constraints method[1]

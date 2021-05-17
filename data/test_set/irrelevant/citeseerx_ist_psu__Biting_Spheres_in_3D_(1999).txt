@@ -1,0 +1,3 @@
+Biting Spheres in 3D (1999)
+
+We present an efficient 3D meshing algorithm which combines the merits of two popular meshing methods, advancing front and sphere packing methods. In particular, it inherits the practicality and simplicity of advancing front and the size-and-quality guarantee of the sphere packing method. We prove that it generates a well-shaped mesh whose size is within a constant factor of the optimal possible for an arbitrary domain in 3D, extending the previous 2D results and algorithms to 3D.

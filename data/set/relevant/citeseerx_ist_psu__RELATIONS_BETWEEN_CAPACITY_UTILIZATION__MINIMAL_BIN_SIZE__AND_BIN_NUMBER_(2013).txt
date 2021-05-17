@@ -1,0 +1,3 @@
+RELATIONS BETWEEN CAPACITY UTILIZATION, MINIMAL BIN SIZE, AND BIN NUMBER (2013)
+
+We consider the two-dimensional bin packing problem (BPP): given a set I = {1,..., n} of rectangular items L x wi, find the minimal number of rectangular bins L x W needed to pack all items. Rotation of the items is not permitted.

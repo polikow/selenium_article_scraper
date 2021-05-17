@@ -1,0 +1,3 @@
+A multi-faced buildup algorithm for three-dimensional packing problems
+
+This paper provides a new approach to solving the three-dimensional packing problem. The heuristic developed uses a multi-faced buildup technique in the packing procedure for which there is no requirement for packed boxes to form flat layers. The basic algorithm is then augmented by a Look-ahead strategy. Experimental results indicate an average packing utilization of 87.8% which improve current benchmarks significantly. The new approaches given here add to heuristics currently available.

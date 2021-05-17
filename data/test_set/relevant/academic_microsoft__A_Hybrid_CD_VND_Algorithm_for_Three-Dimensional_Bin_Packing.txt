@@ -1,0 +1,3 @@
+A Hybrid CD/VND Algorithm for Three-Dimensional Bin Packing
+
+The three-dimensional bin packing problem consists of packing a set of boxes into the minimum number of bins. This paper presents a new GRASP algorithm for solving three-dimensional bin packing problems. More precisely, the constructive phase is based on a caving degree (CD) heuristic developed for the container loading problem. In the improvement phase, several new moves are designed and combined in a VND structure. The resulting hybrid CD/VND algorithm is simple and quite fast and the extensive computational results on test instances from the literature show that the quality of the solutions is equal to or better than that obtained by the best existing heuristic procedures.

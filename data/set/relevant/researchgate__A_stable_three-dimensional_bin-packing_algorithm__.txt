@@ -1,0 +1,3 @@
+A stable three-dimensional bin-packing algorithm /
+
+Thesis (M.S.)--Utah State University, Dept. of Computer Science, 2002. Includes bibliographical references (leaves 41-42).

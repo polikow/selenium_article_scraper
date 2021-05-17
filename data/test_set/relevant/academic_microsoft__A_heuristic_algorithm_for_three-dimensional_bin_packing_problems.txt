@@ -1,0 +1,3 @@
+A heuristic algorithm for three-dimensional bin packing problems
+
+Threedimensional bin packing problems are categorized as NPcomplete problems, which can be solved only by heuristic algorithms. In this paper a heuristic method based on dynamic space decomposition and merging of empty space is proposed. The packing space is expressed by the tritree structure and is searched by the depthfirst rule. According to the appointed sequential rule and positional rule, the optimal packing result can be obtained quickly. The rule of merging empty space is specified to pack the "awkward packing objects". The conclusion drawn from the experimental study is meaningful and useful to the threedimensional bin packing.

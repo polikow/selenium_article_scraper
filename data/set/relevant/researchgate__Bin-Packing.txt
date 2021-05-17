@@ -1,0 +1,3 @@
+Bin-Packing
+
+Suppose we have n objects, each of a given size, and some bins of equal capacity. We want to assign the objects to the bins, using as few bins as possible. Of course the total size of the objects assigned to one bin should not exceed its capacity.

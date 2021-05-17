@@ -1,0 +1,3 @@
+A Fuzzy Bacterial Evolutionary Solution for Three Dimensional Bin Packing Problems
+
+This paper presents an evolutionary solution for a commonly occuring task, the three dimensional version of the bin packing problem. The algorithm presented here is a variation of bacterial evolution, and also utilizes fuzzy logic in its fitness calculations. The goal is to give a useful alternative method to the basic problem, and to demonstrate that the addition of fuzzy logic to the fitness function benefits the speed of the evolutionary process. The paper first describes the specific problem, then moves on to detail every key part of the algorithm. Finally, the results from a number of test runs are used to show the general effectivess, and the contrast between the two versions.

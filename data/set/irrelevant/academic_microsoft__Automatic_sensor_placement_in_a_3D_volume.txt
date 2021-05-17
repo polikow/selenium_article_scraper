@@ -1,0 +1,3 @@
+Automatic sensor placement in a 3D volume
+
+Given a 3D environment, a set of constraints, and a set of sensor models, this paper addresses the problem of finding the set of sensors and their corresponding placement that covers a target space in the environment. The set of possible sensors is represented in a parametric space associated with the sensor's pose. Initially, the target space is discretized as a set of space elements. A voting scheme builds an accumulator array where each space element votes for all sensors that may observe it while satisfying the perceptual constraints. A heuristic selects the best set of cameras that covers the target space. We present experimental results with synthetic and realistic 3D models.

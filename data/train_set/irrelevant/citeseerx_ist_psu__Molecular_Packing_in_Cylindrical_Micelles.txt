@@ -1,0 +1,3 @@
+Molecular Packing in Cylindrical Micelles
+
+The elongated shape of linear, worm-like, micelles is among the most common aggregation geometries of amphiphilic molecules in aqueous solutions. The cylindrical body of these uni-dimensional micelles can be regarded as an intermediate packing geometry, of a higher growth dimensionality than that of a spherical micelle and lower than that of a planar bilayer. In all these three canonical structures, the hydrophobic tails

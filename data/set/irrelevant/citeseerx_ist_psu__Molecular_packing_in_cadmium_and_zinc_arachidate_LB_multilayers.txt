@@ -1,0 +1,3 @@
+Molecular packing in cadmium and zinc arachidate LB multilayers
+
+A combination of grazing incidence X-ray reflection/diffraction (GIXR/GIXD) and atomic force microscopy have been used to study the 3D structure in cadmium arachidate (CdA) and single phase zinc arachidate (ZnA) LB multilayers. The CdA multilayers have an ideal close packed herringbone structure. The molecules have a non-centred in-plane arrangement with specific orientational relation between the central and the corner molecules. In contrast, the ZnA multilayers have a hexagonal layer plane packing with tilted molecules. The molecules are loosely packed with rotational freedom about chain axis as observed in ‘rotator ’ phases.
