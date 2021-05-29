@@ -12,6 +12,8 @@ from scraping import Article
 
 
 class ArticleClassifier:
+    """Классификатор статей, основанный на наивном байесовском алгоритме."""
+
     def __init__(self):
         self.vectorizer = TfidfVectorizer(
             min_df=5,
@@ -23,12 +25,22 @@ class ArticleClassifier:
         self.classes = []
 
     def train(self, train_set: sklearn.utils.Bunch):
+        """
+        Обучение классификатора
+
+        :param train_set: набор, по которому классификатор обучается
+        """
         x = self.vectorizer.fit_transform(train_set.data)
         y = train_set.target
         self.classifier = MultinomialNB(alpha=1).fit(x, y)
         self.classes = train_set.target_names
 
     def test(self, test_set: sklearn.utils.Bunch):
+        """
+        Оценка обученного классификатора
+
+        :param test_set: набор, по которому классификатор оценивается
+        """
         if self.classifier is None:
             raise Exception("Классификатор еще прошел обучение!")
         else:
@@ -42,6 +54,14 @@ class ArticleClassifier:
             ))
 
     def predict(self, article: Article) -> str:
+        """
+        Предсказывает, к какому классу относится заданная статья.
+
+        :param article: статья, класс которой надо определить
+        """
+        if self.classifier is None:
+            raise Exception("Классификатор еще не прошел обучение!")
+
         x = self.vectorizer.transform([f"{article.name}\n\n{article.annotation}"])
         predicted_index = self.classifier.predict(x)[0]
         predicted_class = self.classes[predicted_index]
@@ -50,6 +70,8 @@ class ArticleClassifier:
     @staticmethod
     def _text_preprocessor(raw_text: bytes) -> str:
         """
+        Препроцессор, через который проходят статьи.
+
         Текст преобразуется следующим образом:
             1. удаляются:
                 1.1 все спец символы

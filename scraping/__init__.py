@@ -1,6 +1,6 @@
 from typing import List
 
-from scraping.article import Article, ArticleSavedAlreadyException
+from scraping.article import Article
 from scraping.article_db import ArticleDB
 from scraping.article_scraper import ArticleScraper
 from scraping.articles_utils import generate_html, open_html

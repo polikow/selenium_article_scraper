@@ -12,13 +12,25 @@ import scraping
 nltk.download('stopwords')
 
 
-def underlined_prefix(text: str, size: int) -> str:
-    return f"\033[4m{text[:size]}\033[0m{text[size:]}"
+def underlined_prefix(text: str, n: int) -> str:
+    """
+    :param text: текст, начало которого надо подчеркнуть
+    :param n: количество первых символов, которые надо подчеркнуть
+    :return: текст с подчеркнутыми первыми символами.
+    """
+    return f"\033[4m{text[:n]}\033[0m{text[n:]}"
 
 
 def create_classified_set(articles: List[scraping.Article],
                           classes: List[str],
                           path: str):
+    """
+    Утилита для ручной классификации статей.
+
+    :param articles: статьи, которые можно классифицировать
+    :param classes: классы, по которым классифицируются статьи
+    :param path: директория, в которую сохраняется классифицированный набор
+    """
     assert len(articles) > 0
     assert len(classes) > 1
 
@@ -36,7 +48,10 @@ def create_classified_set(articles: List[scraping.Article],
     while len(set(prefixes)) != len(classes):
         prefix_size += 1
         prefixes = [c[:prefix_size] for c in classes]
-    helper = f"[{' | '.join([underlined_prefix(c, prefix_size) for c in classes])}]"
+
+    classes_with_underlined_first_letters = \
+        ' | '.join([underlined_prefix(c, prefix_size) for c in classes])
+    helper = f"[{classes_with_underlined_first_letters}]"
 
     pairs = {c[:prefix_size]: c for c in classes}
     articles_per_class = {c: 0 for c in classes}
@@ -60,4 +75,5 @@ def create_classified_set(articles: List[scraping.Article],
 
 
 def load_set(path: str) -> sklearn.utils.Bunch:
+    """Загружает из заданной директории классифицированный набор"""
     return load_files(path)

@@ -8,10 +8,6 @@ def wrap(text: str) -> str:
     return '\n'.join(textwrap.wrap(text, 80))
 
 
-class ArticleSavedAlreadyException(Exception):
-    pass
-
-
 @dataclass
 class Article:
     name: str
@@ -40,7 +36,8 @@ class Article:
                 self.author == "" or
                 self.document_url == "" or
                 len(self.annotation) < 100 or
-                (self.source_url == "https://researchgate.net" and "citation" in self.document_url)
+                (self.source_url == "https://researchgate.net"
+                 and "citation" in self.document_url)
         )
 
     @property
@@ -66,13 +63,14 @@ class Article:
     def save_into_directory(self, directory_path: str):
         file_path = self.__save_path(directory_path)
         if os.path.exists(file_path):
-            raise ArticleSavedAlreadyException()
+            raise Exception("Статья уже сохранена в этой директории!")
         with open(file_path, "w") as file:
             file.write(f"{self.name}\n\n{self.annotation}")
 
     @property
     def short_source_url(self) -> str:
-        without_protocol = self.source_url.replace("https://", '').replace("http://", '')
+        without_protocol = \
+            self.source_url.replace("https://", '').replace("http://", '')
         last_dot = without_protocol.rfind('.')
         if last_dot == -1:
             raise Exception("нельзя выделить короткое название сайта")
@@ -81,10 +79,13 @@ class Article:
 
     @property
     def name_without_special_chars(self) -> str:
-        return self.name.replace(',', '_').replace('.', '_').replace(' ', '_').replace('/', '_')
+        return self.name\
+            .replace(',', '_').replace('.', '_')\
+            .replace(' ', '_').replace('/', '_')
 
     def __save_path(self, directory_path: str) -> str:
-        return f"{directory_path}/{self.short_source_url}__{self.name_without_special_chars}.txt"
+        return f"{directory_path}/" \
+               f"{self.short_source_url}__{self.name_without_special_chars}.txt"
 
     def __str__(self):
         return f'\033[1m{wrap(self.name)}\033[0m\n\n' \

@@ -2,15 +2,15 @@ import classification
 import scraping
 
 # # 1) скрейпинг
-# scraping.set_db_path("data")
-# scraping.scrape_every_source(["3d bin packing",
-#                               "3d bin packing problem",
-#                               "three-dimensional bin packing"])
+scraping.set_db_path("data")
+scraping.scrape_every_source(["3d bin packing",
+                              "3d bin packing problem",
+                              "three-dimensional bin packing"])
 
 # # 2) создание набора вручную классифицированных статей
-# scraping.set_db_path("data")
-# all_articles = scraping.get_scraped_articles()
-# classification.create_classified_set(all_articles, ["relevant", "irrelevant"], "data/set")
+scraping.set_db_path("data")
+all_articles = scraping.get_scraped_articles()
+classification.create_classified_set(all_articles, ["relevant", "irrelevant"], "data/set")
 
 # 3) фильтрация статей
 scraping.set_db_path("data")

@@ -20,15 +20,18 @@ class ArticleScraper(ABC):
 
     def scrape(self, queries: List[str]) -> Iterator[Article]:
         self._logger.info("started scraping")
-        for query in queries:
-            self._get_search_page(query)
-            while True:
-                yield from self.__scrape_search_page()
-                if self._has_next_page:
-                    self._logger.info("переход на следующую страницу результатов")
-                    self._get_next_page()
-                else:
-                    break
+        try:
+            for query in queries:
+                self._get_search_page(query)
+                while True:
+                    yield from self.__scrape_search_page()
+                    if self._has_next_page:
+                        self._logger.info("переход на следующую страницу результатов")
+                        self._get_next_page()
+                    else:
+                        break
+        except KeyboardInterrupt:
+            ...
         self._logger.info("done scraping")
 
     def __scrape_search_page(self) -> Iterator[Article]:
